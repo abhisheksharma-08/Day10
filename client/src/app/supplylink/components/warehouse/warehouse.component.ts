@@ -17,6 +17,7 @@ export class WarehouseComponent implements OnInit {
   ngOnInit(): void {
     // ✅ EXACTLY what the tests expect
     this.warehouseForm = this.fb.group({
+      warehouseId: [null, [Validators.required, Validators.min(1)]],
       supplierId: [null, [Validators.required, Validators.min(1)]],
       warehouseName: ['', Validators.required],
       location: [''],
